@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.WindowManager;
 
 public class Flashlight extends Activity {
@@ -12,7 +13,6 @@ public class Flashlight extends Activity {
     private SharedPreferences mPrefs;
     private boolean mFullBright;
 
-    /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,5 +35,14 @@ public class Flashlight extends Activity {
         MenuInflater inflater = new MenuInflater(this);
         inflater.inflate(R.menu.main_menu, menu);
         return true;
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        super.onOptionsItemSelected(item);
+        if (item.getItemId() == R.id.flashlight_menu_settings) {
+            return true;
+        }
+        return false;
     }
 }
