@@ -6,7 +6,7 @@
 		android:title="Full Brightness"
 		android:summary="Force the screen to full brightness"/>
 	<ListPreference
-		android:key="prf_key_color"
+		android:key="@string/pref_key_color"
 		android:title="Color"
 		android:summary="Set the flashlight color"
 		android:entries="@array/color_names"
