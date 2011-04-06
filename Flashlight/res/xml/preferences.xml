@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<CheckBoxPreference
+		android:key="@string/pref_key_fullbright"
+		android:title="Full Brightness"
+		android:summary="Force the screen to full brightness"/>
+	<ListPreference
+		android:key="prf_key_color"
+		android:title="Color"
+		android:summary="Set the flashlight color"
+		android:entries="@array/color_names"
+		android:entryValues="@array/color_values"/>
+</PreferenceScreen>

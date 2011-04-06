@@ -1,6 +1,7 @@
 package com.rosehulman.android.flashlight;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
@@ -41,6 +42,7 @@ public class Flashlight extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         super.onOptionsItemSelected(item);
         if (item.getItemId() == R.id.flashlight_menu_settings) {
+            startActivity(new Intent(this, FlashlightPreferences.class));
             return true;
         }
         return false;
