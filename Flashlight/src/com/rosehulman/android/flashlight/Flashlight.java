@@ -1,18 +1,22 @@
 package com.rosehulman.android.flashlight;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.WindowManager;
 
 public class Flashlight extends Activity {
     
-    private boolean mFullBright = true;
+    private SharedPreferences mPrefs;
+    private boolean mFullBright;
 
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        mPrefs = getPreferences(MODE_PRIVATE);
+        mFullBright = mPrefs.getBoolean(getString(R.string.pref_key_fullbright), true);
         setBrightness();
     }
     
